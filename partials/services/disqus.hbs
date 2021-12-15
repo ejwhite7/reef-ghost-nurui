@@ -1,13 +1,17 @@
 {{! Detailed instructions can be found in the Documentation >> Services >> Disqus }}
 
-
-<div id="disqusloader">
+{{!--
+<div id="disqus_thread"></div>
 <script>
-    var options = {
-        scriptUrl: "https://reefgrows.disqus.com/embed.js",
-        disqusConfig: function() {
-        this.page.url = '{{url absolute="true"}}';
-        this.page.identifier = 'ghost-{{comment_id}}';
-    }};
+    var disqus_config = function () {
+        this.page.url = "{{url absolute="true"}}";  
+        this.page.identifier = "ghost-{{comment_id}}"
+    };
+(function() {
+    var d = document, s = d.createElement('script');
+        s.src = 'https://XXXXX.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
 </script>
-</div>
+--}}

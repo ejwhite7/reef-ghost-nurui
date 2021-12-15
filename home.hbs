@@ -1,0 +1,23 @@
+{{!< default}}
+<div class="top-wrap">
+	<section class="title-wrap">
+		<div class="top-social">
+			{{>social_icons_default}}
+			{{>social_icons}}
+		</div>
+		<div id="featured-top" class="no-featured bg-top{{#if @site.cover_image}} is-cover" style="background-image: url({{@site.cover_image}}){{/if}}">
+			{{#if @site.description}}
+			<h1 class="title">{{@site.description}}</h1>
+			{{/if}}
+			<h2 class="description">{{>description}}</h2>
+		</div>
+		{{>featured}}
+		<div id="featured-articles" class="no-featured vertical text-posts">
+			<div class="text rotate">
+				{{t "Articles"}}
+			</div>
+		</div>
+	</section>
+</div>
+{{>loop}}
+{{pagination}}

@@ -1,22 +1,22 @@
 {{!< default}}
 {{#post}}
-<article>
-	{{>pages}}
-	<div class="section-post wrap">
-		<div class="post-wrap {{^if feature_image}}no-image{{/if}}{{#if @labs.members}}{{^if access}} no-access{{/if}}{{/if}}">
-			{{#if @labs.members}}
-			{{#if access}}
-			{{content}}
-			{{else}}
-			{{>members_cta}}
+<div class="post-wrap{{#if feature_image}} is-image{{else}} no-image{{/if}}">
+	<div class="top-wrap">
+		<section class="title-wrap">
+			<div class="top-social">
+				{{>social_icons_default}}
+				{{>social_icons}}
+			</div>
+			<div class="bg-top">
+				<h1 class="title">{{{title}}}</h1>
+			</div>
+			{{#if feature_image}}
+			<div class="featured-post-image" style="background-image: url({{feature_image}})"></div>
 			{{/if}}
-			{{else}}
-			{{content}}
-			{{/if}}
-		</div>
+		</section>
 	</div>
-</article>
-{{#has tag="#subscribe-form"}}
-{{>members_subscribe_form}}
-{{/has}}
-{{/post}}
+	<div class="post-content">
+		{{content}}
+	</div>
+	{{/post}}
+</div>

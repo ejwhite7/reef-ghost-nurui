@@ -1,9 +1,9 @@
 {
-    "name": "nurui",
-    "demo": "https://nurui.fueko.net",
-    "version": "2.3.4",
+    "name": "arate",
+    "demo": "https://arate.fueko.net",
+    "version": "1.10.1",
     "engines": {
-        "ghost-api": "v3"
+        "ghost-api": "v4"
     },
     "author": {
         "name": "fueko",

@@ -1,0 +1,20 @@
+<div class="featured-wrap">
+	<div class="bg-medium">
+		<div class="vertical text-featured">
+			<div class="text rotate">
+				{{t "Featured"}}
+			</div>
+		</div>
+		{{#get "pages" filter="featured:true" order="published_at desc" as |featured-pages|}}
+		{{#foreach featured-pages}}
+		{{>featured_posts}}
+		{{/foreach}}
+		{{/get}}
+		{{#get "posts" filter="featured:true" as |featured-posts|}}
+		{{#foreach featured-posts}}
+		{{>featured_posts}}
+		{{/foreach}}
+		{{/get}}
+	</div>
+	<div class="bg-bottom"></div>
+</div>

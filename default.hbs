@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{@site.lang}}">
+<html lang="{{@site.locale}}">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,27 +11,39 @@
 		<link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}">
 		{{ghost_head}}
 	</head>
-	<body class="{{body_class}}{{#get "tags" limit="all" filter="visibility:internal"}}{{#foreach tags visibility="internal"}} global-{{slug}}{{/foreach}}{{/get}}">
-		<div class="global-wrap">
-			<div class="section-content-wrap">
-				{{>header}}
-				{{{body}}}
-			</div>
+	<body class="{{body_class}}">
+		<div class="site-wrap">
+			{{>header}}
+			{{{body}}}
+			{{>members/subscribe_form}}
 			{{>footer}}
-			{{>members_notifications}}
 		</div>
-		{{>search}}
+		<script>
+        /* foreach.js
+		   –––––––––––––––––––––––––––––––––––––––––––––––––––– 
+		   Version : 1.1.0
+		   Repo    : github.com/toddmotto/foreach
+		   Author  : Todd Motto
+		   License : MIT
+		   –––––––––––––––––––––––––––––––––––––––––––––––––––– */
+		   var forEach=function(a,b,c){if("[object Object]"===Object.prototype.toString.call(a))for(var d in a)Object.prototype.hasOwnProperty.call(a,d)&&b.call(c,a[d],d,a);else for(var e=0,f=a.length;f>e;e++)b.call(c,a[e],e,a)};
+
+		   /* Custom settings for foreach.js */
+		   var circleMenu = document.querySelectorAll(".hamburger");
+		   if (circleMenu) {
+    		   forEach(circleMenu, function(e) {
+      		     e.addEventListener("click", function() {
+      		         this.classList.toggle("is-active");
+      		     }, false);
+  			   });
+		   }
+		</script>
 		{{#if pagination.pages}}
-		<script>var numberPage = {{pagination.pages}};</script>
 		<script src="{{asset "js/index.js"}}"></script>
 		{{/if}}
 		{{#is "post, page"}}
 		<script src="{{asset "js/post.js"}}"></script>
 		{{/is}}
-		<script src="{{asset "js/global.js"}}"></script>
-		<script src="{{asset "js/ityped.js"}}"></script>
-		{{{block "members_notifications_script"}}}
-		{{{block "members_subscribe_form_script"}}}
 		{{ghost_foot}}
 	</body>
 </html>

@@ -1,0 +1,32 @@
+<div class="featured-flex">
+	{{#if feature_image}}
+	<div class="left">
+		<div class="appear">
+			<a href="{{url}}"><div class="featured-image featured-home-image" style="background-image: url({{feature_image}})"></div></a>
+		</div>
+	</div>
+	<div class="right">
+		<article class="featured-post-wrap">
+			<div class="featured-post">
+				<h2><a href="{{url}}">{{title}}</a></h2>
+				<div class="item-excerpt">
+					<p>{{excerpt words="55"}} <a href="{{url}}">[...]</a></p>
+				</div>
+				<a href="{{url}}"><span class="featured-more-button">{{t "Read more"}}</span></a>
+			</div>
+		</article>
+	</div>
+	{{else}}
+	<div class="center">
+		<article class="featured-post-wrap">
+			<div class="featured-post">
+				<h2><a href="{{url}}">{{title}}</a></h2>
+				<div class="item-excerpt">
+					<p>{{excerpt words="55"}} <a href="{{url}}">[...]</a></p>
+				</div>
+				<a href="{{url}}"><span class="featured-more-button">{{t "Read more"}}</span></a>
+			</div>
+		</article>
+	</div>
+	{{/if}}
+</div>

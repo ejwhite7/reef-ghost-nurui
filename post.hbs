@@ -1,42 +1,47 @@
 {{!< default}}
 {{#post}}
-<article>
-	{{>posts}}
-	<div class="section-post wrap">
-		<div class="post-wrap {{^if feature_image}}no-image{{/if}}{{#if @labs.members}}{{^if access}} no-access{{/if}}{{/if}}">
-			{{#if @labs.members}}
-			{{#if access}}
-			{{content}}
-			{{else}}
-			{{>members_cta}}
+<div class="post-wrap{{^if feature_image}} no-image{{/if}}">
+	<div class="top-wrap">
+		<section class="title-wrap">
+			<div class="top-social">
+				{{>social_icons_default}}
+				{{>social_icons}}
+			</div>
+			<div class="bg-top">
+				<h1 class="title">{{{title}}}</h1>
+				<div class="item-meta author-name">
+					{{authors}}
+					<br>
+					<time datetime="{{date format="YYYY-MM-DD"}}"> {{t "Published"}} {{date published_at timeago="true"}}</time><br>
+				</div>
+			</div>
+			{{#if feature_image}}
+			<div class="featured-post-image" style="background-image: url({{feature_image}})"></div>
 			{{/if}}
-			{{else}}
-			{{content}}
-			{{/if}}
-		</div>
-		{{#if @labs.members}}
-		{{#if access}}
-		{{>post_authors}}
-		{{/if}}
-		{{else}}
-		{{>post_authors}}
-		{{/if}}
+		</section>
+	</div>
+	<div class="post-content">
+		{{content}}
 		<div class="post-meta">
-			{{>post_share}}
+			{{#if access}}
+			{{#if tags}}
+			<div class="tags">
+				{{tags separator=" / "}}
+			</div>
+			{{/if}}
+			{{/if}}
+			<div class="post-share">
+				<a href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}" target="_blank" rel="noopener" aria-label="Twitter share icon">{{>icons/social/twitter}}</a>
+				<a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" target="_blank" rel="noopener" aria-label="Facebook share icon">{{>icons/social/facebook}}</a>
+				<a class="copy-link" id="copy" data-clipboard-target="#link-value">{{>icons/site/copy}}</a>
+				<span class="copied">{{t "Copied!"}}</span>
+				<input class="copy-link" type="text" value="{{url absolute="true"}}" id="link-value">
+			</div>
 		</div>
 	</div>
-</article>
-{{>post_navigation}}
-<div class="section-disqus">
-	{{#if @labs.members}}
-	{{#if access}}
-	{{>services/disqus}}
-	{{/if}}
-	{{else}}
-	{{>services/disqus}}
-	{{/if}}
 </div>
-{{#has tag="#subscribe-form"}}
-{{>members_subscribe_form}}
-{{/has}}
+{{>prevnext}}
+<div class="disqus">
+	{{>services/disqus}}
+</div>
 {{/post}}
