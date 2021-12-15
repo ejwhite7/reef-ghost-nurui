@@ -1,0 +1,12 @@
+{{#if @labs.members}}
+{{#has visibility="members"}}
+<span class="members-label white">
+	{{t "Members"}}
+</span>
+{{/has}}
+{{#has visibility="paid"}}
+<span class="members-label white">
+	{{t "Paid-members"}}
+</span>
+{{/has}}
+{{/if}}

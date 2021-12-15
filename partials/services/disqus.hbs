@@ -1,0 +1,13 @@
+{{! Detailed instructions can be found in the Documentation >> Services >> Disqus }}
+
+
+<div id="disqusloader">
+<script>
+    var options = {
+        scriptUrl: "https://reefgrows.disqus.com/embed.js",
+        disqusConfig: function() {
+        this.page.url = '{{url absolute="true"}}';
+        this.page.identifier = 'ghost-{{comment_id}}';
+    }};
+</script>
+</div>
