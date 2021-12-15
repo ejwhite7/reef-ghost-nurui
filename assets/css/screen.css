@@ -47,12 +47,12 @@
    –––––––––––––––––––––––––––––––––––––––––––––––––––– */
 
    /* Color of details */
-   --ghost-accent-color: #f5a16b;
+   --ghost-accent-color: #6881AA;
 
    /* Gradients */
-   --color-gradient-start: #e3745d;
-   --color-gradient-middle: #f4a16b;
-   --color-gradient-end: #ffbf74;
+   --color-gradient-start: #6881AA;
+   --color-gradient-middle: #92ABCF;
+   --color-gradient-end: #E7ECF2;
 }
 
 /* //////////////////////////////////////////////////////////////////////////
@@ -83,7 +83,7 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
 
 /* Custom settings for lightense-images
    –––––––––––––––––––––––––––––––––––––––––––––––––––– */
-.lightense-backdrop{background-color:rgba(255,255,255,.8)!important;-webkit-backdrop-filter:initial!important;backdrop-filter:initial!important}.lightense-wrap ~ br,.lightense-wrap ~ small{display:none}
+.lightense-backdrop{background-color:rgb(248,248,246)!important;-webkit-backdrop-filter:initial!important;backdrop-filter:initial!important}.lightense-wrap ~ br,.lightense-wrap ~ small{display:none}
 
 /* //////////////////////////////////////////////////////////////////////////
 
@@ -103,7 +103,7 @@ body {
    max-height: 100%;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
-   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+   -webkit-tap-highlight-color: #474D53;
 }
 
 body {
@@ -353,7 +353,7 @@ input[type='button'] {
    -------------------------------------------------------------------------- */
 body,
 .subscribe-success h3 {
-   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+   font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 }
 
 h1,h2,h3,h4,h5,h6,
@@ -361,7 +361,7 @@ h1,h2,h3,h4,h5,h6,
 .description,
 .text,
 .header-wrap .left {
-   font-family: 'Spectral', Helvetica, Arial, sans-serif;
+   font-family: 'PT Serif', Helvetica, Arial, sans-serif;
 }
 
 /* --------------------------------------------------------------------------
