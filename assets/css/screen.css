@@ -345,23 +345,21 @@ button,
 input[type='submit'],
 input[type='reset'],
 input[type='button'] {
-   color: #161b3d;
+   color: #494C52;
    border-radius: 100px;
 }
 
 /* --------------------------------------------------------------------------
    2.Fonts
    -------------------------------------------------------------------------- */
-body,h3,h4,h5,h6,
-.subscribe-success h3 {
-   font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
-   font-weight: 300;
-}
-
-h1,h2,
-.title,
+body,h1,h2,h3,h4,h5,h6,
 .description,
 .text,
+.subscribe-success h3 {
+   font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+   font-weight: 400;
+}
+.title,
 .header-wrap .left {
    font-family: 'PT Serif', Helvetica, Arial, sans-serif;
    color:#494C52;
