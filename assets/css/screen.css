@@ -120,6 +120,7 @@ h1,h2,h3,h4,h5,h6 {
    font-weight: normal;
    line-height: 1.5;
    margin: 5px 0 25px;
+   color:#494C52;
 }
 
 h1 { font-size: 50px }
@@ -322,8 +323,8 @@ input[type='button'] {
    white-space: nowrap;
    text-decoration: none;
    letter-spacing: 1px;
-   color: #161b3d;
-   border: 2px solid #161b3d;
+   color: #494C52;
+   border: 2px solid #494C52;
    background-color: transparent;
 }
 
@@ -335,7 +336,7 @@ button:focus,
 input[type='submit']:focus,
 input[type='reset']:focus,
 input[type='button']:focus {
-   color: #161b3d;
+   color: #494C52;
    border: 2px solid var(--ghost-accent-color);
    outline: 0;
 }
@@ -378,7 +379,7 @@ a,
 .post-content .kg-bookmark-card a,
 .text-subscribe,
 .subscribe button {
-   color: #161b3d
+   color: #494C52
 }
 
 .top-social svg:hover,
@@ -386,24 +387,24 @@ a,
 .footer-social svg:hover,
 .post-share svg,
 .pagination-wrap svg {
-   fill: #161b3d
+   fill: #494C52
 }
 
 .subscribe-email::-webkit-input-placeholder {
-   color: #161b3d;
+   color: #494C52;
 }
 
 .subscribe-email::-ms-input-placeholder {
-   color: #161b3d;
+   color: #494C52;
 }
 
 .subscribe-email::-moz-placeholder {
    opacity: 1;
-   color: #161b3d;
+   color: #494C52;
 }
 
 .subscribe-email::placeholder {
-   color: #161b3d;
+   color: #494C52;
 }
 
 a:hover,
