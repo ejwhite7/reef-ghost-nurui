@@ -725,7 +725,7 @@ blockquote:before,
    }
 
    .description {
-      font-size: 15px;
+      font-size: 18px;
       line-height: normal;
    }
 
@@ -867,7 +867,7 @@ blockquote:before,
 }
 
 .featured-post .item-excerpt {
-   font-size: 14px;
+   font-size: 18px;
    padding: 0 0 20px;
 }
 
@@ -1361,7 +1361,7 @@ blockquote:before,
 }
 
 .post-wrap {
-   font-size: 17px;
+   font-size: 18px;
    overflow: visible;
    width: auto;
    margin: 0;
@@ -1676,7 +1676,7 @@ iframe {
    –––––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media (max-width:479px) {
    .post-wrap {
-      font-size: 15px;
+      font-size: 18px;
    }
 
    .featured-post-image {
@@ -1727,7 +1727,7 @@ iframe {
 
 @media (min-width:480px) and (max-width:1024px) {
    .post-wrap {
-      font-size: 16px;
+      font-size: 18px;
    }
 
    .featured-post-image {
