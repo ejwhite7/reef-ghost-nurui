@@ -1,14 +1,14 @@
 {
-    "name": "arate",
-    "demo": "https://arate.fueko.net",
+    "name": "reef",
+    "demo": "https://reefgrows.com",
     "version": "1.10.1",
     "engines": {
         "ghost-api": "v4"
     },
     "author": {
-        "name": "fueko",
-        "email": "hello@fueko.net",
-        "url": "https://fueko.net"
+        "name": "EJ White",
+        "email": "ej@reefgrows.com",
+        "url": "https://reefgrows.com"
     },
     "keywords": [
         "ghost-theme"
